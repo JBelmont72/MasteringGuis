@@ -8,3 +8,6 @@ wheels/
 
 # Virtual environments
 .venv
+pyqt5-source/.DS_Store
+*/.DS_Store
+**/.DS_Store
