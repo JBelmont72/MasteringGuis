@@ -11,7 +11,8 @@ class MainWindow(QMainWindow):
         self.setWindowTitle("My App")
 
         widget = QLabel("Hello")
-        widget.setPixmap(QPixmap("otje.jpg"))
+        # widget.setPixmap(QPixmap("otje.jpg"))
+        widget.setPixmap(QPixmap("pyqt5-source/designer/animal-penguin.png"))
 
         self.setCentralWidget(widget)
 

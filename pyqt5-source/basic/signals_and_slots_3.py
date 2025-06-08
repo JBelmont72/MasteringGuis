@@ -1,3 +1,12 @@
+'''
+self.windowTitleChanged.connect(
+            self.the_window_title_changed
+        )  # <2
+
+
+'''
+
+
 from PyQt5.QtWidgets import QApplication, QMainWindow, QPushButton
 
 import sys
@@ -38,13 +47,20 @@ class MainWindow(QMainWindow):
         print("Clicked.")
         new_window_title = choice(window_titles)
         print("Setting title:  %s" % new_window_title)
-        self.setWindowTitle(new_window_title)  # <3>
+        self.windowTitleChanged.connect(
+            self.the_window_title_changed
+        )  # <2  # <3>
 
-    def the_window_title_changed(self, window_title):
-        print("Window title changed: %s" % window_title)  # <4>
+    def the_window_title_changed(self, new_window_title):## the second arguement is passed from the first function
+        print("Window title changed: %s" % new_window_title)  # <4>
 
-        if window_title == "Something went wrong":
+        if new_window_title == "Something went wrong":
             self.button.setDisabled(True)
+    # def the_window_title_changed(self, window_title):
+    #     print("Window title changed: %s" % window_title)  # <4>
+
+    #     if window_title == "Something went wrong":
+    #         self.button.setDisabled(True)
 
 
 app = QApplication(sys.argv)
