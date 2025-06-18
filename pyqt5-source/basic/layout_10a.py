@@ -1,3 +1,7 @@
+
+# /Users/judsonbelmont/Downloads/MasteringGuis/pyqt5-source/basic/layout_10a_Stacked_Tabs_Buttons.py
+# 
+
 import sys
 
 from PyQt5.QtWidgets import (
