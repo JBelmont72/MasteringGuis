@@ -31,7 +31,8 @@ class MainWindow(QMainWindow):
         self.addToolBar(toolbar)
 
         button_action = QAction(
-            QIcon(os.path.join(basedir, "bug.png")),
+            QIcon(os.path.join(basedir, "/Users/judsonbelmont/Downloads/MasteringGuis/Chapter02/smile.gif")),
+            # QIcon(os.path.join(basedir, "bug.png")),
             "Your button",
             self,
         )

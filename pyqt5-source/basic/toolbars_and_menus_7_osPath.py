@@ -13,7 +13,8 @@ from PyQt5.QtWidgets import (
     QToolBar,
 )
 
-basedir = os.path.dirname(__file__)
+# basedir = os.path.dirname(__file__)
+basedir = os.path.dirname('/Users/judsonbelmont/Downloads/MasteringGuis/Images/alarm-clock-blue.png')
 
 
 class MainWindow(QMainWindow):
@@ -32,7 +33,7 @@ class MainWindow(QMainWindow):
         self.addToolBar(toolbar)
 
         button_action = QAction(
-            QIcon(os.path.join(basedir, "bug.png")),
+            QIcon(os.path.join(basedir, "smiley-fat.png")),
             "&Your button",
             self,
         )
@@ -44,7 +45,7 @@ class MainWindow(QMainWindow):
         toolbar.addSeparator()
 
         button_action2 = QAction(
-            QIcon(os.path.join(basedir, "bug.png")),
+            QIcon(os.path.join(basedir, "star.png")),
             "Your &button2",
             self,
         )
@@ -62,8 +63,6 @@ class MainWindow(QMainWindow):
 
         file_menu = menu.addMenu("&File")
         file_menu.addAction(button_action)
-        file_menu.addSeparator()
-        file_menu.addAction(button_action2)
 
     def onMyToolBarButtonClick(self, is_checked):
         print("click", is_checked)
@@ -77,3 +76,47 @@ window = MainWindow()
 window.show()
 
 app.exec_()
+
+
+
+# # Python program to explain os.path.dirname() method 
+#   # example path  /Users/judsonbelmont/Downloads/MasteringGuis/Images/alarm-clock-blue.png
+# # importing os.path module 
+# import os.path
+
+# # Path
+# # path = '/home/User/Documents'
+# path = '/Users/judsonbelmont/Downloads/MasteringGuis/Images/'
+# # Get the directory name  
+# # from the specified path
+# dirname = os.path.dirname(path)
+
+# # Print the directory name  
+# print(dirname)
+
+
+# # Path
+# path = '/Users/judsonbelmont/Downloads/MasteringGuis/Images/animal.png'
+
+# # Get the directory name  
+# # from the specified path
+# dirname = os.path.dirname(path)
+
+# # Print the directory name  
+# print(dirname)
+
+
+# # Path
+# path = 'animal.png'
+
+# # Get the directory name  
+# # from the specified path
+# dirname = os.path.dirname(path)
+
+# # Print the directory name  
+# print(dirname)
+
+# # In the above specified path 
+# # does not contains any
+# # directory so, 
+# # It will print Nothing

@@ -13,7 +13,8 @@ from PyQt5.QtWidgets import (
     QToolBar,
 )
 
-basedir = os.path.dirname(__file__)
+# basedir = os.path.dirname(__file__)
+basedir = os.path.dirname('/Users/judsonbelmont/Downloads/MasteringGuis/Images/alarm-clock-blue.png')
 
 
 class MainWindow(QMainWindow):
@@ -32,8 +33,9 @@ class MainWindow(QMainWindow):
         self.addToolBar(toolbar)
 
         button_action = QAction(
-            QIcon(os.path.join(basedir, "bug.png")),
-            "&Your button",
+            QIcon(os.path.join(basedir, "question.png")),
+            # "&Your button",
+            "Your button",
             self,
         )
         button_action.setStatusTip("This is your button")
@@ -44,7 +46,7 @@ class MainWindow(QMainWindow):
         toolbar.addSeparator()
 
         button_action2 = QAction(
-            QIcon(os.path.join(basedir, "bug.png")),
+            QIcon(os.path.join(basedir, "rainbow.png")),
             "Your &button2",
             self,
         )
@@ -62,6 +64,8 @@ class MainWindow(QMainWindow):
 
         file_menu = menu.addMenu("&File")
         file_menu.addAction(button_action)
+        file_menu.addSeparator()
+        file_menu.addAction(button_action2)
 
     def onMyToolBarButtonClick(self, is_checked):
         print("click", is_checked)
@@ -75,3 +79,4 @@ window = MainWindow()
 window.show()
 
 app.exec_()
+

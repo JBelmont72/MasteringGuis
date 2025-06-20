@@ -13,7 +13,8 @@ from PyQt5.QtWidgets import (
     QToolBar,
 )
 
-basedir = os.path.dirname(__file__)
+basedir = os.path.dirname('/Users/judsonbelmont/Downloads/MasteringGuis/Images/rocket-fly.png')
+# basedir = os.path.dirname(__file__)
 
 
 class MainWindow(QMainWindow):
@@ -32,7 +33,7 @@ class MainWindow(QMainWindow):
         self.addToolBar(toolbar)
 
         button_action = QAction(
-            QIcon(os.path.join(basedir, "bug.png")),
+            QIcon(os.path.join(basedir, "rocket-fly.png")),
             "&Your button",
             self,
         )
@@ -44,7 +45,7 @@ class MainWindow(QMainWindow):
         toolbar.addSeparator()
 
         button_action2 = QAction(
-            QIcon(os.path.join(basedir, "bug.png")),
+            QIcon(os.path.join(basedir, "smiley-fat.png")),
             "Your &button2",
             self,
         )
