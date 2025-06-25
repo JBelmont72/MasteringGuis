@@ -52,6 +52,7 @@ class MainWindow(QMainWindow):
             print("Success!")
         else:
             print("Cancel!")
+            # self.close()
 
     # end::button_clicked[]
 
